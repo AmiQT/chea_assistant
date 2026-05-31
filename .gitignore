@@ -1,0 +1,68 @@
+# ================================================
+# Chin Hin Employee AI Assistant — .gitignore
+# ================================================
+
+# ── Secrets & Credentials ──────────────────────
+.env
+.env.local
+.env.production
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+*_rsa
+*_ed25519
+secrets/
+credentials/
+
+# ── Python / Backend ───────────────────────────
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/**/*.pyo
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# ── Flutter / Dart ─────────────────────────────
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/.packages
+mobile/build/
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/key.properties
+mobile/*.jks
+mobile/*.keystore
+mobile/ios/Pods/
+mobile/ios/.symlinks/
+mobile/ios/Flutter/Flutter.framework
+mobile/ios/Flutter/Flutter.podspec
+mobile/macos/Pods/
+
+# ── IDE / Editor ───────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.cursor/
+
+# ── OS ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs & Debug ───────────────────────────────
+*.log
+*.sqlite
+*.db
+
+# ── Temp / Generated ───────────────────────────
+generate_pdf.py
+*.pdf
