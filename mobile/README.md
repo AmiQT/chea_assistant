@@ -12,7 +12,7 @@
 | HTTP Client | Dio |
 | Auth | Simple Token Auth (SharedPreferences) |
 | Voice | Speech-to-Text |
-| Camera | Camera + Record packages |
+| Image | Image Picker |
 
 ## 📂 Project Structure
 
@@ -35,11 +35,9 @@ lib/
 │   ├── profile_screen.dart
 │   ├── leave_request_screen.dart
 │   ├── claim_submit_screen.dart
-│   ├── room_booking_screen.dart
-│   └── live_vision_screen.dart # Gemini Live Vision
+│   └── room_booking_screen.dart
 ├── services/
-│   ├── api_service.dart   # HTTP wrapper
-│   └── live_vision_service.dart # WebSocket for vision
+│   └── api_service.dart   # HTTP wrapper
 ├── theme/
 │   └── app_theme.dart     # Corporate Noir theme
 └── widgets/
@@ -57,7 +55,6 @@ flutter run
 ## ✨ Key Features
 
 - **AI Chat** - Multimodal chat with text, voice & images
-- **Live Vision** - Real-time camera/audio streaming to Gemini
 - **Leave Management** - Apply & track leave requests
 - **Expense Claims** - Submit claims with receipt photos
 - **Room Booking** - Book meeting rooms

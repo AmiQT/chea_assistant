@@ -486,16 +486,3 @@ class TestChatEndpoint:
         data = response.json()
         assert data["success"] is True
         assert "data" in data
-
-
-# ================================================
-# LIVE VISION
-# ================================================
-
-class TestLiveVision:
-    def test_live_vision_disabled(self, client):
-        response = client.get("/api/v1/live/live-vision/token")
-        assert response.status_code == 200
-        data = response.json()
-        assert data["success"] is False
-        assert "disabled" in data["status"]

@@ -17,7 +17,6 @@ ingress:
   - hostname: chinhin-api.yourdomain.com  # Replace with your subdomain
     service: http://localhost:8000
     originRequest:
-      # Enable WebSocket support for Live Vision
       noTLSVerify: true
       connectTimeout: 30s
       tlsTimeout: 10s

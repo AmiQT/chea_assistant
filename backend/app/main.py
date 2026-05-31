@@ -12,7 +12,6 @@ from app.api.v1.claims import router as claims_router
 from app.api.v1.chat import router as chat_router
 from app.api.v1.auth import router as auth_router
 from app.api.v1.nudges import router as nudges_router
-from app.api.v1.live_vision import router as live_vision_router
 
 # Import core modules - error handling, logging, middleware
 from app.core import (
@@ -81,7 +80,6 @@ app.include_router(rooms_router, prefix="/api/v1")
 app.include_router(claims_router, prefix="/api/v1")
 app.include_router(chat_router, prefix="/api/v1")
 app.include_router(nudges_router, prefix="/api/v1")
-app.include_router(live_vision_router, prefix="/api/v1/live", tags=["live"])
 
 # ================================================
 # LIFECYCLE EVENTS

@@ -31,7 +31,6 @@ import '../providers/nudge_provider.dart';
 import 'notification_screen.dart';
 import '../providers/user_provider.dart';
 import '../widgets/ai_cards.dart';
-import 'live_vision_screen.dart';
 
 class ChatScreen extends ConsumerStatefulWidget {
   const ChatScreen({super.key});
@@ -221,18 +220,6 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
               label: "Ask AI",
               isSelected: true,
               onTap: () {},
-            ),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: _buildAIActionChip(
-              icon: Icons.visibility_rounded,
-              label: "Live Assistant",
-              isSelected: false,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const LiveVisionScreen()),
-              ),
             ),
           ),
         ],

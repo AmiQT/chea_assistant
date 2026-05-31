@@ -75,9 +75,6 @@
 </tr>
 </table>
 
-> **Live Vision** (real-time camera streaming) is scaffolded in the mobile app but the
-> backend endpoint is **disabled** in this version — it's out of scope for the current build.
-
 ---
 
 ## Tech Stack

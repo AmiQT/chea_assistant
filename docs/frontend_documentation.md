@@ -18,7 +18,7 @@
 | **Auth** | Supabase Auth | JWT-based authentication |
 | **Styling** | Google Fonts + Flutter Animate | Typography & animations |
 | **Voice** | Speech-to-Text | Voice command input |
-| **Camera** | Camera + Record | Live Vision feature |
+| **Image** | Image Picker | Image attachment |
 | **Markdown** | Flutter Markdown | Rich text rendering |
 
 ---
@@ -44,11 +44,9 @@ lib/
 │   ├── profile_screen.dart # User profile & stats
 │   ├── leave_request_screen.dart # Leave application
 │   ├── claim_submit_screen.dart  # Expense submission
-│   ├── room_booking_screen.dart  # Room reservations
-│   └── live_vision_screen.dart   # Gemini Live Vision
+│   └── room_booking_screen.dart  # Room reservations
 ├── services/
-│   ├── api_service.dart   # Dio HTTP wrapper
-│   └── live_vision_service.dart # WebSocket for vision
+│   └── api_service.dart   # Dio HTTP wrapper
 ├── theme/
 │   └── app_theme.dart     # Corporate Noir dark theme
 └── widgets/
@@ -75,19 +73,13 @@ lib/
 - Tap mic icon to start/stop listening
 - Auto-fills text in input bar
 
-### 4. 👁️ Live Vision (Gemini 2.0)
-- Real-time camera streaming via WebSocket
-- Audio capture and streaming
-- Ephemeral token authentication
-- Live transcript display
-
-### 5. 📋 Employee Services
+### 4. 📋 Employee Services
 - **Leave Management**: Apply, view balance, track requests
 - **Expense Claims**: Submit with receipt photos
 - **Room Booking**: Reserve meeting rooms
 - **Profile**: View stats and quick actions
 
-### 6. 🔔 Proactive Nudges
+### 5. 🔔 Proactive Nudges
 - AI-generated reminders
 - Badge notification in chat header
 - Mark as read functionality
@@ -112,7 +104,6 @@ The app connects to the Python backend via `ApiService`.
 | Leaves | `GET /api/v1/leaves/balance`, `POST /api/v1/leaves` |
 | Claims | `GET /api/v1/claims/categories`, `POST /api/v1/claims` |
 | Rooms | `GET /api/v1/rooms`, `POST /api/v1/rooms/book` |
-| Live Vision | `GET /api/v1/live-vision/token` |
 
 ---
 
@@ -147,7 +138,6 @@ The app connects to the Python backend via `ApiService`.
 |-------|----------|
 | Connection Refused | Check `lib/config.dart` - use correct IP |
 | Permission Denied (Mic) | Grant microphone permission in device settings |
-| Camera Black Screen | Grant camera permission in device settings |
 | Auth Failed | Verify Supabase credentials in `core/supabase_config.dart` |
 
 ---
