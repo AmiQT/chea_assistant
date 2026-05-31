@@ -3,11 +3,9 @@ Azure AI Foundry - Managed Agent
 Guna azure-ai-agents SDK (auto-installed dengan azure-ai-projects)
 """
 import logging
-import asyncio
 from typing import Optional
 from azure.ai.agents import AgentsClient
 from azure.ai.agents.models import FunctionTool, ToolSet, RunStatus
-from azure.identity import DefaultAzureCredential, ClientSecretCredential
 from app.config import get_settings
 from app.services.data_store import get_store
 
@@ -80,7 +78,6 @@ class FoundryAgentManager:
     def _get_client(self) -> AgentsClient:
         if self._client:
             return self._client
-        settings = get_settings()
         if not self.endpoint:
             raise ValueError("AZURE_OPENAI_ENDPOINT missing!")
         # Guna InteractiveBrowserCredential — akan buka browser sekali untuk login

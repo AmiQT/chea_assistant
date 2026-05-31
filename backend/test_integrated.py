@@ -1,6 +1,6 @@
 """
-test_integrated.py — DEPRECATED  
+test_integrated.py â€” DEPRECATED  
 Test integration dengan Supabase. Dah tak relevan selepas migration.
 Guna tests/test_api.py untuk testing API endpoints.
 """
-print("?? Test dah deprecated — Supabase dah dibuang.")
+print("?? Test dah deprecated â€” Supabase dah dibuang.")

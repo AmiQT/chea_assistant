@@ -47,7 +47,7 @@ found = False
 for ep in test_endpoints:
     for v in test_versions:
         if test_config(ep, v):
-            print(f"\nFOUND WORKING CONFIG!")
+            print("\nFOUND WORKING CONFIG!")
             print(f"Endpoint: {ep}")
             print(f"Version: {v}")
             found = True
